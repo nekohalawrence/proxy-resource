@@ -13,6 +13,8 @@ Modified date: 2026-02-18 16:08
 - 不推荐使用此软件来使用 sub-store 容易触发内存限制（必定触发），而且平时使用（只使用分流规则）也会触发，shadowrocket 这个软件也差不多，loon 和 surge 就好很多了。
 - Stash 的 Wiki 好奇怪，感觉少了很多东西，无法合理的进行配置。IOS 巨魔用户下载的破解 Stash 可能无法使用覆写，正常的分流可以使用。个人不推荐入手正版 30￥。
 
+## 
+
 ```
 https://raw.githubusercontent.com/nekohalawrence/PCR/refs/heads/main/Config_File/Stash/Stash-stable.yaml
 ```
@@ -21,7 +23,7 @@ https://raw.githubusercontent.com/nekohalawrence/PCR/refs/heads/main/Config_File
 https://raw.githubusercontent.com/nekohalawrence/PCR/refs/heads/main/Config_File/Stash/Stash-test.yaml
 ```
 
-## reference
+## 
 
 | 项目名称                                                                          | 配置链接                                                                                                                    |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
