@@ -8,3 +8,4 @@
 # DOMAIN-KEYWORD
 
 payload:
+  - PROCESS-NAME,cloudflared.exe
