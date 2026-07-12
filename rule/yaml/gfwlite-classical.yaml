@@ -23,6 +23,7 @@
 # DOMAIN-SUFFIX: 5
 
 payload:
+  - DOMAIN,app.unifans.io
   # 工具
   - DOMAIN-SUFFIX,ticktick.com
   # 游戏资源
