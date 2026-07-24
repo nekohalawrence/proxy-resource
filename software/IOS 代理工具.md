@@ -1,32 +1,31 @@
 ---
 Created date: 2025-02-07 星期五 凌晨 12:39
-Modified date: 2026-05-27 星期三 早上 8:58
+Modified date: 2026-07-21 星期二 早上 8:49
 ---
 
-# AgencyTools
+- [LanceX](https://shadowboat.app/lancexapp/)
+	- 介绍: 
+	- 标签: 
+- Loon
+	- 介绍: 
+	- 标签: 
+- [Clash-Dash](https://github.com/bin64/Clash-Dash)
+	- 介绍: 原生 SwiftUI 开发的 OpenClash/Nikki(MihomoTProxy) 管理工具。
+	- 标签: 
+- Quantumult_X
+	- 介绍: 
+	- 标签: 
+- Shadowrocket
+	- 介绍: 
+	- 标签: 
+- Karing
+	- 介绍: 
+	- 标签: 
+	- 文档: [文档](https://karing.app/)
+- Stash
+	- 介绍: 
+	- 标签: 
+- Surge
+	- 介绍: 
+	- 标签: 
 
-**代理工具内核**
-
-| 内核                                          | 介绍  | 文档教程 |
-| ------------------------------------------- | --- | ---- |
-| Mihomo                                      |     |      |
-| [LanceX](https://shadowboat.app/lancexapp/) |     |      |
-| Loon                                        |     |      |
-| Quantumult_X                                |     |      |
-| Shadowrocket                                |     |      |
-| Sing-Box                                    |     |      |
-| Stash                                       |     |      |
-| Surge                                       |     |      |
-
-## GUI
-
-| 支持的内核                                       | 软件名称                                              | 介绍                                                | 使用教程 |
-| ------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ---- |
-| [LanceX](https://shadowboat.app/lancexapp/) | [LanceX](https://shadowboat.app/lancexapp/)       |                                                   |      |
-| Loon                                        | Loon                                              |                                                   |      |
-| Mihomo                                      | [Clash-Dash](https://github.com/bin64/Clash-Dash) | 原生 SwiftUI 开发的 OpenClash/Nikki(MihomoTProxy) 管理工具 |      |
-| Quantumult_X                                | Quantumult_X                                      |                                                   |      |
-| Shadowrocket                                | Shadowrocket                                      |                                                   |      |
-| Sing-Box                                    | Karing                                            | [文档](https://karing.app/)                         |      |
-| Stash                                       | Stash                                             |                                                   |      |
-| Surge                                       | Surge                                             |                                                   |      |
