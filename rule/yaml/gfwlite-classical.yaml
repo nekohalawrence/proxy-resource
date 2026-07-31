@@ -17,6 +17,19 @@
 # 域名服务
 # 代理服务
 
+# 包含的规则
+# 工具
+# 游戏资源
+# 小说
+# 论坛
+# DNS 资源
+# 域名服务
+# 代理服务
+
+# 规则计数
+# DOMAIN: 11
+# DOMAIN-SUFFIX: 5
+
 payload:
   - DOMAIN,app.unifans.io
   # 工具
