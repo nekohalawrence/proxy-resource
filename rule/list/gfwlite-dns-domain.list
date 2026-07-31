@@ -1,0 +1,13 @@
+# name: gfwlite-dns-domain
+# content: 未定
+# update_date: 20260731
+# update_url: https://raw.githubusercontent.com/nekohalawrence/proxy-resource/main/rule/list/gfwlite-dns-domain.list
+# repo: https://github.com/nekohalawrence/proxy-resource/tree/main/rule/list
+
+# -------规则计数-------
+# DOMAIN: 2
+
+# -------规则列表-------
+
+'+.esjzone.cc'
+'+.blackhh.com'
