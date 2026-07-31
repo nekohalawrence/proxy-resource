@@ -1,0 +1,51 @@
+# name: gfwlite-domain
+# content: 因为对于大多数需要代理的服务基本上都被大佬收录了，所以这个规则只收集一些漏网之鱼的代理规则。其中，虽然有些站点被屏蔽了，但因为他的域名是 `.cn`，所以他会走直连，我们就无法访问。例如 `https://dns.icoa.cn/` 这个网址我们就会走直连，但他又被屏蔽了，所以我们无法访问。
+# update_date: 20260731
+# update_url: https://raw.githubusercontent.com/nekohalawrence/proxy-resource/main/rule/list/gfwlite-domain.list
+# repo: https://github.com/nekohalawrence/proxy-resource/tree/main/rule/list
+
+# -------规则计数-------
+# DOMAIN: 11
+# DOMAIN-SUFFIX: 5
+
+# -------规则列表-------
+# 工具
+# 游戏资源
+# 小说
+# 论坛
+# DNS 资源
+# 域名服务
+# 代理服务
+
+# 包含的规则
+# 工具
+# 游戏资源
+# 小说
+# 论坛
+# DNS 资源
+# 域名服务
+# 代理服务
+
+'+.unifans.io'
+# 工具
+'+.ticktick.com'
+# 游戏资源
+'+.gamebanana.com'
+'+.saucenao.com'
+# 小说
+'+.hlib.cc'
+'+.alicesw.com'
+# 论坛
+'+.hjd2048.com'
+# DNS 资源
+'+.dns.icoa.cn'
+# 域名服务
+'+.freedomain.one'
+'+.www.site.ac'
+'+.x10hosting.com'
+'+.xiaohuolongjc.top'
+'+.xhlxhlxiaohuolongjc.top'
+# 代理服务
+'+.xn--wtq35pfyd55o.co'
+'+.cf-vl.nekoha520.dpdns.org'
+'+.jichang.mhdy.net'
