@@ -4,16 +4,16 @@
 # update_url: https://raw.githubusercontent.com/nekohalawrence/proxy-resource/main/rule/list/aiglobal-classical.list
 # repo: https://github.com/nekohalawrence/proxy-resource/tree/main/rule/list
 
-# 包含的规则
-# OpenAI
-# BardAI
-
-# 规则计数
+# -------规则计数-------
 # DOMAIN: 12
 # DOMAIN-KEYWORD: 1
 # DOMAIN-SUFFIX: 30
 # IP-ASN: 1
 # IP-CIDR: 2
+
+# -------规则列表-------
+# OpenAI
+# BardAI
 
 # OpenAI
 DOMAIN,browser-intake-datadoghq.com

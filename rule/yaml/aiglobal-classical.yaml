@@ -4,16 +4,16 @@
 # update_url: https://raw.githubusercontent.com/nekohalawrence/proxy-resource/main/rule/yaml/aiglobal-classical.yaml
 # repo: https://github.com/nekohalawrence/proxy-resource/tree/main/rule/yaml
 
-# 包含的规则
-# OpenAI
-# BardAI
-
-# 规则计数
+# -------规则计数-------
 # DOMAIN: 12
 # DOMAIN-KEYWORD: 1
 # DOMAIN-SUFFIX: 30
 # IP-ASN: 1
 # IP-CIDR: 2
+
+# -------规则列表-------
+# OpenAI
+# BardAI
 
 payload:
   # OpenAI

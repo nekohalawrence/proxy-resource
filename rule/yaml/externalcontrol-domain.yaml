@@ -5,8 +5,8 @@
 # repo: https://github.com/nekohalawrence/proxy-resource/tree/main/rule/yaml
 
 payload:
-  - "clash.razord.top"
-  - "yacd.haishan.me"
-  - "board.zash.run.place"
+  - clash.razord.top
+  - yacd.haishan.me
+  - board.zash.run.place
 
 
