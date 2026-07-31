@@ -55,10 +55,6 @@ jobs:
             echo "No changes detected."
           else
             echo "Changes detected, committing..."
-            git commit -F - <<'MSG'
-chore: update rules stats, urls and list files [skip ci]
-
-Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>
-MSG
+            git commit -m "chore: update rules stats, urls and list files [skip ci]" -m "Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
             git push
           fi
