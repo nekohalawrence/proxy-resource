@@ -21,10 +21,10 @@ payload:
   - +.gamebanana.com
   - +.saucenao.com
   # 小说
-  - '+.hlib.cc'
-  - '+.alicesw.com'
-  - '+.esjzone.cc'
-  - '+.novalpie.cc'
+  - +.hlib.cc
+  - +.alicesw.com
+  - +.esjzone.cc
+  - +.novalpie.cc
   # 论坛
   - +.hjd2048.com
   # DNS 资源
@@ -36,6 +36,6 @@ payload:
   - +.xiaohuolongjc.top
   - +.xhlxhlxiaohuolongjc.top
   # 代理服务
-  - '+.xn--wtq35pfyd55o.co'
-  - '+.cf-vl.nekoha520.dpdns.org'
-  - '+.jichang.mhdy.net'
+  - +.xn--wtq35pfyd55o.co
+  - +.cf-vl.nekoha520.dpdns.org
+  - +.jichang.mhdy.net
