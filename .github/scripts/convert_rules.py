@@ -73,7 +73,8 @@ def generate_header(original_header_lines, filename, ext, stats, categories):
             break
 
         # --- 跳过旧的统计/分类块 ---
-        if stripped == '# 包含的规则' or stripped == '# 规则计数':
+        # 兼容两种样式的旧块：'# 包含的规则' / '# 规则计数' 和 '# -------规则列表-------' / '# -------规则计数-------'
+        if any(k in stripped for k in ['包含的规则', '规则计数', '规则列表']):
             skip_block = True
             continue
         
@@ -83,7 +84,6 @@ def generate_header(original_header_lines, filename, ext, stats, categories):
                 continue
             else:
                 skip_block = False
-
         if skip_block:
             continue
 
@@ -122,34 +122,31 @@ def generate_header(original_header_lines, filename, ext, stats, categories):
     while base_lines and base_lines[-1].strip() == '':
         base_lines.pop()
 
-    # 2. 构建【包含规则块】 (Block 2)
-    cat_lines = []
-    if categories:
-        cat_lines.append('# 包含的规则')
-        for cat in categories:
-            cat_lines.append(f'# {cat}')
-
-    # 3. 构建【规则计数块】 (Block 3)
+    # 2. 构建【规则计数块】 (Block 2) — gfwlite 风格，放在前面并使用分隔线
     stat_lines = []
     if stats:
-        stat_lines.append('# 规则计数')
+        stat_lines.append('# -------规则计数-------')
         for r_type, count in sorted(stats.items()):
             stat_lines.append(f'# {r_type}: {count}')
 
+    # 3. 构建【规则列表块】 (Block 3) — gfwlite 风格的规则列表标题
+    cat_lines = []
+    if categories:
+        cat_lines.append('# -------规则列表-------')
+        for cat in categories:
+            cat_lines.append(f'# {cat}')
+
     # --- 最终拼接 ---
-    # 将存在的块放入列表
     blocks = []
     if base_lines:
         blocks.append("\n".join(base_lines))
-    if cat_lines:
-        blocks.append("\n".join(cat_lines))
+    # gfwlite 风格把规则计数放在规则列表之前
     if stat_lines:
         blocks.append("\n".join(stat_lines))
+    if cat_lines:
+        blocks.append("\n".join(cat_lines))
 
-    # 使用两个换行符连接各块（即产生一行空行）
     final_header = "\n\n".join(blocks)
-    
-    # 尾部添加两个换行符，以便与后续的 payload: 或 body 隔开一行空行
     return final_header + "\n\n"
 
 def write_file_if_changed(path, content):
@@ -195,22 +192,53 @@ def process_file(filename):
     categories = extract_payload_categories(payload_raw)
 
     # --- 生成新的 YAML 内容 ---
+    # 先构建修改后的 payload（去除条目两端的单/双引号，同时保留注释和缩进）
+    payload_lines = payload_raw.splitlines(True)  # 保留换行符
+    modified_payload_lines = []
+    # 匹配：前导空白和 '- '，可选的引号，值，可选的引号，可选内联注释
+    item_re = re.compile(r'^(\s*-\s*)([\'\"]?)(.+?)([\'\"]?)(\s*(#.*))?(\r?\n)?$')
+    for pl in payload_lines:
+        if pl.strip() == '':
+            modified_payload_lines.append(pl)
+            continue
+        if pl.lstrip().startswith('#'):
+            # 注释行，保留原样
+            modified_payload_lines.append(pl)
+            continue
+        m = item_re.match(pl)
+        if m:
+            leading = m.group(1)
+            value = m.group(3)
+            trailing_comment = m.group(5) or ''
+            newline = '\n' if pl.endswith('\n') else ''
+            if trailing_comment:
+                # trailing_comment 含有前置空格和注释符号
+                modified_payload_lines.append(f"{leading}{value}{trailing_comment}{newline}")
+            else:
+                modified_payload_lines.append(f"{leading}{value}{newline}")
+        else:
+            # 不是标准的 - item 行，原样保留
+            modified_payload_lines.append(pl)
+
+    modified_payload_raw = ''.join(modified_payload_lines)
+
     new_yaml_header = generate_header(header_raw.splitlines(), filename_no_ext, '.yaml', stats, categories)
-    # 注意: generate_header 结尾已经带了 \n\n，所以这里直接接 payload:
-    new_yaml_content = new_yaml_header + "payload:" + payload_raw
+    new_yaml_content = new_yaml_header + "payload:" + modified_payload_raw
 
     # --- 生成新的 LIST 内容 ---
     new_list_header = generate_header(header_raw.splitlines(), filename_no_ext, '.list', stats, categories)
     
     list_body_lines = []
-    for line in payload_raw.splitlines():
+    for line in modified_payload_raw.splitlines():
         stripped = line.strip()
         if not stripped: continue
         if stripped.startswith('- '):
-            list_body_lines.append(stripped[2:])
+            # 去掉 '- ' 和两端引号（如果有）
+            item = stripped[2:].strip().strip('\'\"')
+            list_body_lines.append(item)
         elif stripped.startswith('#'):
             list_body_lines.append(stripped)
-    
+
     # 注意：List 文件通常不需要 "payload:" 关键字，直接接内容
     # generate_header 结尾有 \n\n，刚好分开 Header 和 Body
     new_list_content = new_list_header + "\n".join(list_body_lines) + "\n"
