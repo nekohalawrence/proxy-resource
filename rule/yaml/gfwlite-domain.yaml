@@ -4,10 +4,6 @@
 # update_url: https://raw.githubusercontent.com/nekohalawrence/proxy-resource/main/rule/yaml/gfwlite-domain.yaml
 # repo: https://github.com/nekohalawrence/proxy-resource/tree/main/rule/yaml
 
-# -------规则计数-------
-# DOMAIN: 11
-# DOMAIN-SUFFIX: 5
-
 # -------规则列表-------
 # 工具
 # 游戏资源
@@ -18,27 +14,27 @@
 # 代理服务
 
 payload:
-  - '+.unifans.io'
+  - +.unifans.io
   # 工具
-  - '+.ticktick.com'
+  - +.ticktick.com
   # 游戏资源
-  - '+.gamebanana.com'
-  - '+.saucenao.com'
+  - +.gamebanana.com
+  - +.saucenao.com
   # 小说
   - '+.hlib.cc'
   - '+.alicesw.com'
   - '+.esjzone.cc'
   - '+.novalpie.cc'
   # 论坛
-  - '+.hjd2048.com'
+  - +.hjd2048.com
   # DNS 资源
-  - '+.dns.icoa.cn'
+  - +.dns.icoa.cn
   # 域名服务
-  - '+.freedomain.one'
-  - '+.www.site.ac'
-  - '+.x10hosting.com'
-  - '+.xiaohuolongjc.top'
-  - '+.xhlxhlxiaohuolongjc.top'
+  - +.freedomain.one
+  - +.www.site.ac
+  - +.x10hosting.com
+  - +.xiaohuolongjc.top
+  - +.xhlxhlxiaohuolongjc.top
   # 代理服务
   - '+.xn--wtq35pfyd55o.co'
   - '+.cf-vl.nekoha520.dpdns.org'

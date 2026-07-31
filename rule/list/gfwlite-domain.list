@@ -4,10 +4,6 @@
 # update_url: https://raw.githubusercontent.com/nekohalawrence/proxy-resource/main/rule/list/gfwlite-domain.list
 # repo: https://github.com/nekohalawrence/proxy-resource/tree/main/rule/list
 
-# -------规则计数-------
-# DOMAIN: 11
-# DOMAIN-SUFFIX: 5
-
 # -------规则列表-------
 # 工具
 # 游戏资源
@@ -17,35 +13,27 @@
 # 域名服务
 # 代理服务
 
-# 包含的规则
++.unifans.io
 # 工具
++.ticktick.com
 # 游戏资源
++.gamebanana.com
++.saucenao.com
 # 小说
++.hlib.cc
++.alicesw.com
++.esjzone.cc
 # 论坛
++.hjd2048.com
 # DNS 资源
++.dns.icoa.cn
 # 域名服务
++.freedomain.one
++.www.site.ac
++.x10hosting.com
++.xiaohuolongjc.top
++.xhlxhlxiaohuolongjc.top
 # 代理服务
-
-'+.unifans.io'
-# 工具
-'+.ticktick.com'
-# 游戏资源
-'+.gamebanana.com'
-'+.saucenao.com'
-# 小说
-'+.hlib.cc'
-'+.alicesw.com'
-# 论坛
-'+.hjd2048.com'
-# DNS 资源
-'+.dns.icoa.cn'
-# 域名服务
-'+.freedomain.one'
-'+.www.site.ac'
-'+.x10hosting.com'
-'+.xiaohuolongjc.top'
-'+.xhlxhlxiaohuolongjc.top'
-# 代理服务
-'+.xn--wtq35pfyd55o.co'
-'+.cf-vl.nekoha520.dpdns.org'
-'+.jichang.mhdy.net'
++.xn--wtq35pfyd55o.co
++.cf-vl.nekoha520.dpdns.org
++.jichang.mhdy.net
