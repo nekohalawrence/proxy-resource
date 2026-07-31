@@ -5,4 +5,4 @@
 # repo: https://github.com/nekohalawrence/proxy-resource/tree/main/rule/yaml
 
 payload:
-  - '+.blackhh.com'
+  - +.blackhh.com
